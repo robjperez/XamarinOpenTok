@@ -5,6 +5,8 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
+using Opentok;
+
 namespace OpenTokForms.iOS
 {
 	[Register ("AppDelegate")]
@@ -13,6 +15,9 @@ namespace OpenTokForms.iOS
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
+
+			IOpentokFactory otFactory = OpentokFactoryImpl.GetInstance ();	
+			otFactory.Opentok = new Opentok.Opentok ();
 
 			LoadApplication (new App ());
 

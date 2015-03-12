@@ -7,7 +7,10 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<Label>Conference Page</Label>
-			<local:OpenTokView x:Name="openTokView"></local:OpenTokView>
+			<OpenGLView x:Name="publisherView"
+				WidthRequest="320" HeightRequest="240"/>
+			<OpenGLView x:Name="subscriberView" 
+				WidthRequest="320" HeightRequest="240"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
